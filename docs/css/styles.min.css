@@ -1,0 +1,338 @@
+:root {
+    --primary: #5c3c2d;
+    --secondary: #c59a3c;
+    --accent: #c59a3c;
+    --bg-dark: #111111;
+    --bg-darker: #000000;
+    --text-light: #e0e0e0;
+    --glass-bg: rgba(255, 255, 255, 0.1);
+  }
+  
+  body {
+    background: linear-gradient(135deg, #111111, #1a1a1a);
+    font-family: sans-serif;
+    color: var(--text-light);
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
+    height: auto;
+    padding: 5%;
+    text-align: center;
+  }
+  
+  .txt-with-img {
+    display: flex;
+    align-items: center;
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+  
+  .txt-with-img .content {
+    position: absolute;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    color: #f1f1f1;
+    width: 100%;
+    padding: 20px;
+    border-radius: 0 0 0.7rem 0.7rem;
+  }
+  
+  .txt-with-img img {
+    border-radius: 0.7rem;
+    width: 100%;
+    object-fit: cover;
+  }
+  
+  .curvy-bg {
+    position: relative;
+    background: linear-gradient(135deg, var(--primary) 50%, var(--secondary) 50%);
+  }
+  
+  .curvy-bg-left {
+    position: relative;
+    background: linear-gradient(49deg, var(--primary) 50%, var(--secondary) 50%);
+  }
+  
+  .nav-bg img {
+    max-width: 60%;
+  }
+  
+  .nav-bg {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .nav-bg,
+  footer {
+    background-color: var(--bg-darker);
+  }
+  
+  .navbar-link {
+    transition: transform 0.3s, color 0.3s;
+    color: var(--text-light);
+  }
+  
+  .navbar-link:hover {
+    transform: scale(1.05);
+    color: var(--accent);
+  }
+  
+  .hamburger {
+    cursor: pointer;
+    transition: transform 0.3s;
+  }
+  
+  .hamburger span {
+    display: block;
+    height: 2px;
+    width: 24px;
+    background-color: var(--text-light);
+    margin: 4px 0;
+  }
+  
+  .hamburger.open span:first-child {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  
+  .hamburger.open span:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .hamburger.open span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+  
+  header img {
+    max-width: 200px;
+  }
+  
+  @media (min-width: 768px) {
+    header img {
+      max-width: 250px;
+    }
+  }
+  
+  .slider {
+    position: relative;
+    height: 60vh;
+    overflow: hidden;
+  }
+  
+  .slider-inner {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+  }
+  
+  .slider-inner img {
+    flex: 0 0 100%;
+    height: 60vh;
+    object-fit: cover;
+    object-position: center;
+  }
+  
+  @media (min-width: 1024px) {
+    .slider {
+      height: 600px;
+    }
+  
+    .slider-inner img {
+      height: 600px;
+      object-fit: contain;
+    }
+  }
+  
+  .slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    border: none;
+    padding: 0.5rem;
+    cursor: pointer;
+    z-index: 60;
+  }
+  
+  .slider-btn.left {
+    left: 1rem;
+  }
+  
+  .slider-btn.right {
+    right: 1rem;
+  }
+  
+  .slider-container {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+  }
+  
+  .card {
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    transition: transform 0.6s;
+    padding: 1rem;
+  }
+  
+  /* Keeping huly classes untouched */
+  
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 50;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background: rgba(0, 0, 0, 0.5);
+  }
+  
+  .modal-content {
+    background: url("https://source.unsplash.com/collection/190727/800x600") center center/cover no-repeat,
+      rgba(0, 0, 0, 0.6);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    border: 1px solid #888;
+    width: 90%;
+    max-width: 500px;
+    border-radius: 8px;
+    z-index: 60;
+  }
+  
+  .modal-content * {
+    filter: none;
+  }
+  
+  .close-modal {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 1.5rem;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+.huly-btn {
+    transition: 0.2s;
+    text-transform: uppercase;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2.75rem;
+    width: 100%;
+    font-size: 0.8125rem;
+    letter-spacing: -0.015em;
+    position: relative;
+    z-index: 10;
+    border-radius: 9999px;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    background-color: #d1d1d1;
+    padding-left: 3.6875rem;
+    padding-right: 3.25rem;
+    overflow: hidden;
+  }
+  .huly-btn > .huly-btn-bg {
+    position: absolute;
+    z-index: -1;
+    display: flex;
+    width: 204px;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s;
+  }
+  .huly-btn > .huly-btn-bg > .huly-btn-bg1 {
+    position: absolute;
+    top: 50%;
+    height: 121px;
+    width: 121px;
+    transform: translateY(-50%);
+    background: radial-gradient(
+      50% 50% at 50% 50%,
+      #fffff5 3.5%,
+      #ffaa81 26.5%,
+      #ffda9f 37.5%,
+      rgba(255, 170, 129, 0.5) 49%,
+      rgba(210, 106, 58, 0) 92.5%
+    );
+  }
+  .huly-btn > .huly-btn-bg > .huly-btn-bg2 {
+    position: absolute;
+    top: 50%;
+    height: 103px;
+    width: 204px;
+    transform: translateY(-50%);
+    background: radial-gradient(
+      43.3% 44.23% at 50% 49.51%,
+      #fffff7 29%,
+      #fffacd 48.5%,
+      #f4d2bf 60.71%,
+      rgba(214, 211, 210, 0) 100%
+    );
+    filter: blur(5px);
+  }
+  .huly-btn span {
+    white-space: nowrap;
+    font-size: 0.875rem;
+    line-height: 42px;
+    color: #000;
+  }
+  footer {
+    padding: 2rem 1rem;
+    background-color: var(--bg-darker);
+  }
+  
+  footer .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    color: var(--text-light);
+  }
+  
+  footer h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+  }
+  
+  footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  footer ul li {
+    margin-bottom: 0.25rem;
+  }
+  
+  footer ul li a {
+    color: var(--text-light);
+    transition: color 0.3s;
+  }
+  
+  footer ul li a:hover {
+    color: var(--accent);
+  }
+  
+  footer p {
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 0.875rem;
+  }
+  
+  section {
+    background: url('') no-repeat center center/cover;
+    backdrop-filter: blur(5px);
+  }
+  
