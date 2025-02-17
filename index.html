@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Saket College of Arts, Science & Commerce</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body class="text-gray-200">
+    <!-- Header -->
+    <header class="curvy-bg py-2 px-4 flex items-center justify-between bg-gradient-to-r from-black to-gray-900">
+      <div class="container mx-auto flex flex-col md:flex-row items-center justify-between">
+        <div class="mb-4 md:mb-0">
+          <img src="logo-large.png" alt="Saket College Logo">
+        </div>
+        <div class="text-center">
+          <h3 class="text-lg uppercase tracking-widest">Saket Gyanpeeth's</h3>
+          <h1 class="text-4xl font-extrabold mt-2">Saket College of Arts, Science & Commerce</h1>
+          <div class="mt-2 space-x-4">
+            <span class="text-sm uppercase">Permanently Affiliated to University of Mumbai</span>
+            <br>
+            <span class="text-sm uppercase">NAAC Accredited 'B' Grade</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="nav-bg shadow">
+      <div class="container mx-auto px-4">
+        <div class="flex items-center justify-between py-4">
+          <div class="mb-4 md:mb-0">
+            <img src="logo.png" alt="Saket College Logo" class="w-16 md:w-24">
+          </div>
+          <div class="text-white text-xl font-semibold">
+            <a href="#" class="navbar-link">Home</a>
+          </div>
+          <ul class="hidden md:flex space-x-6 ml-auto">
+            <li><a href="#" class="navbar-link" data-section="about">About Us</a></li>
+            <li><a href="#" class="navbar-link" data-section="courses">Courses</a></li>
+            <li><a href="#" class="navbar-link" data-section="facilities">Facilities</a></li>
+            <li><a href="#" class="navbar-link" data-section="contact">Contact</a></li>
+          </ul>
+          <div class="md:hidden">
+            <button id="menu-btn" class="hamburger focus:outline-none">
+              <span></span><span></span><span></span>
+            </button>
+          </div>
+        </div>
+        <ul id="mobile-menu" class="md:hidden flex-col space-y-2 pb-4 hidden">
+          <li><a href="#" class="block px-4 py-2 navbar-link" data-section="about">About Us</a></li>
+          <li><a href="#" class="block px-4 py-2 navbar-link" data-section="courses">Courses</a></li>
+          <li><a href="#" class="block px-4 py-2 navbar-link" data-section="facilities">Facilities</a></li>
+          <li><a href="#" class="block px-4 py-2 navbar-link" data-section="contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Slider Section -->
+    <div class="slider-container flex flex-col md:flex-row gap-4 justify-center">
+      <div id="slider1" class="slider flex-1">
+        <div class="slider-inner" data-index="0">
+          <img src="static/WhatsApp-Image-2024-04-01-at-10.47.04.jpeg" alt="Slide 3">
+          <img src="static/WhatsApp-Image-2024-06-15-at-11.38.24-1.jpeg" alt="Slide 4">
+          <img src="static/WhatsApp-Image-2024-06-15-at-11.38.24.jpeg" alt="Slide 5">
+          <img src="static/WhatsApp-Image-2024-06-15-at-11.38.25.jpeg" alt="Slide 6">
+        </div>
+        <button class="slider-btn left" onclick='prevSlide("slider1")'>&#10094;</button>
+        <button class="slider-btn right" onclick='nextSlide("slider1")'>&#10095;</button>
+      </div>
+      <div id="slider2" class="slider flex-1">
+        <div class="slider-inner" data-index="0">
+          <img src="static/WhatsApp-Image-2024-06-21-at-12.34.06-1.jpeg" alt="Slide 7">
+          <img src="static/WhatsApp-Image-2024-06-21-at-12.34.06-2.jpeg" alt="Slide 8">
+          <img src="static/WhatsApp-Image-2024-06-21-at-12.34.06.jpeg" alt="Slide 9">
+          <img src="static/WhatsApp-Image-2024-06-21-at-12.34.07-1.jpeg" alt="Slide 10">
+        </div>
+        <button class="slider-btn left" onclick='prevSlide("slider2")'>&#10094;</button>
+        <button class="slider-btn right" onclick='nextSlide("slider2")'>&#10095;</button>
+      </div>
+    </div>
+
+    <main>
+      <!-- Dynamic Content Section -->
+      <div id="dynamic-content" class="container mx-auto px-4 py-12"></div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-8 bg-[var(--bg-darker)]">
+      <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div class="text-center md:text-left">
+          <h3 class="text-xl font-bold mb-2">Quick Links</h3>
+          <ul class="space-y-1">
+            <li><a href="#" class="navbar-link" data-section="about">About Us</a></li>
+            <li><a href="#" class="navbar-link" data-section="courses">Courses</a></li>
+            <li><a href="#" class="navbar-link" data-section="facilities">Facilities</a></li>
+          </ul>
+        </div>
+        <div class="text-center">
+          <h3 class="text-xl font-bold mb-2">Contact</h3>
+          <p class="text-sm">Email: info@saketcollege.edu.in</p>
+          <p class="text-sm">Phone: +91-1234567890</p>
+        </div>
+        <div class="text-center md:text-right">
+          <h3 class="text-xl font-bold mb-2">Address</h3>
+          <p class="text-sm">Saket Vidyanagari, Kalyan East, Thane, Maharashtra, India</p>
+        </div>
+      </div>
+      <div class="mt-4 text-center text-sm">
+        © 2025 Saket College of Arts, Science & Commerce. All Rights Reserved.
+      </div>
+    </footer>
+
+    <!-- Fixed Contact Button & Modal -->
+    <div class="fixed bottom-6 right-6 z-50">
+      <button id="open-modal" class="huly-btn" style="width:auto; padding:1rem">
+        <div class="huly-btn-bg">
+          <div class="huly-btn-bg1"></div>
+          <div class="huly-btn-bg2"></div>
+        </div>
+        <span>Contact Us</span>
+      </button>
+    </div>
+
+    <div id="contact-modal" class="modal">
+      <div class="modal-content rounded">
+        <span id="close-modal" class="close-modal" style="cursor:pointer">&times;</span>
+        <h2 class="text-2xl font-bold mb-4">Get in Touch</h2>
+        <form action="#" method="POST" class="space-y-4">
+          <div>
+            <label for="name" class="block mb-1">Name</label>
+            <input id="name" placeholder="Your Name" class="w-full p-2 rounded bg-[var(--bg-darker)] text-gray-200 border border-gray-700 focus:outline-none">
+          </div>
+          <div>
+            <label for="email" class="block mb-1">Email</label>
+            <input type="email" id="email" placeholder="Your Email" class="w-full p-2 rounded bg-[var(--bg-darker)] text-gray-200 border border-gray-700 focus:outline-none">
+          </div>
+          <div>
+            <label for="message" class="block mb-1">Message</label>
+            <textarea id="message" rows="4" placeholder="Your Message" class="w-full p-2 rounded bg-[var(--bg-darker)] text-gray-200 border border-gray-700 focus:outline-none"></textarea>
+          </div>
+          <button type="submit" class="huly-btn">
+            <div class="huly-btn-bg">
+              <div class="huly-btn-bg1"></div>
+              <div class="huly-btn-bg2"></div>
+            </div>
+            <span>Send Message</span>
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <script src="js/index.js"></script>
+  </body>
+</html>
