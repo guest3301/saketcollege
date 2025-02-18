@@ -103,7 +103,7 @@ function loadContent(url, containerId) {
 document.querySelectorAll('.navbar-link').forEach(link => {
   link.addEventListener('click', event => {
     event.preventDefault();
-    const section = event.target.getAttribute('href').substring(1);
+    const section = event.target.getAttribute('href');
     loadContent(`${section}.html`, 'main-content');
   });
 });
