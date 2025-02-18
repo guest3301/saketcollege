@@ -332,6 +332,6 @@ footer p {
 }
 
 section {
-  background: url('static/college-diagonally-campus.jpeg') no-repeat center center/cover;
+  background: url('') no-repeat center center/cover;
   backdrop-filter: blur(5px);
 }
