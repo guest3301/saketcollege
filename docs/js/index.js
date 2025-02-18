@@ -88,3 +88,22 @@ document.querySelectorAll(".wave-divider").forEach((e) => {
       }, 500);
   });
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+  function loadPage(page) {
+    fetch(page)
+      .then(response => response.text())
+      .then(data => {
+        document.querySelector('main').innerHTML = data;
+      });
+  }
+
+  document.querySelectorAll('.navbar-link').forEach(link => {
+    link.addEventListener('click', function(event) {
+      event.preventDefault();
+      const page = this.getAttribute('href');
+      console.log(page);
+      loadPage(page);
+    });
+  });
+});

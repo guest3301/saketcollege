@@ -335,4 +335,12 @@
     background: url('') no-repeat center center/cover;
     backdrop-filter: blur(5px);
   }
-  
+
+/* Add styles for dynamically loaded content */
+.dynamic-content {
+  padding: 20px;
+  background-color: var(--bg-dark);
+  color: var(--text-light);
+  border-radius: 10px;
+  margin-top: 20px;
+}
