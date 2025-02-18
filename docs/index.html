@@ -6,7 +6,7 @@
     <title>Saket College of Arts, Science & Commerce</title>
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="/docs/css/styles.css">
+    <link rel="stylesheet" href="css/styles.css">
   </head>
   <body class="text-gray-200">
     <!-- Header -->
@@ -38,10 +38,10 @@
             <a href="#" class="navbar-link">Home</a>
           </div>
           <ul class="hidden md:flex space-x-6 ml-auto">
-            <li><a href="#college-info" class="navbar-link">About Us</a></li>
-            <li><a href="#courses" class="navbar-link">Courses</a></li>
-            <li><a href="#facilities" class="navbar-link">Facilities</a></li>
-            <li><a href="#contact-modal" class="navbar-link open-contact">Contact</a></li>
+            <li><a href="about" class="navbar-link" data-section="about">About Us</a></li>
+            <li><a href="courses" class="navbar-link" data-section="courses">Courses</a></li>
+            <li><a href="facilities" class="navbar-link" data-section="facilities">Facilities</a></li>
+            <li><a href="#" class="navbar-link" data-section="contact">Contact</a></li>
           </ul>
           <div class="md:hidden">
             <button id="menu-btn" class="hamburger focus:outline-none">
@@ -50,10 +50,10 @@
           </div>
         </div>
         <ul id="mobile-menu" class="md:hidden flex-col space-y-2 pb-4 hidden">
-          <li><a href="#college-info" class="block px-4 py-2 navbar-link">About Us</a></li>
-          <li><a href="#courses" class="block px-4 py-2 navbar-link">Courses</a></li>
-          <li><a href="#facilities" class="block px-4 py-2 navbar-link">Facilities</a></li>
-          <li><a href="#contact-modal" class="block px-4 py-2 navbar-link open-contact">Contact</a></li>
+          <li><a href="#" class="block px-4 py-2 navbar-link" data-section="about">About Us</a></li>
+          <li><a href="#" class="block px-4 py-2 navbar-link" data-section="courses">Courses</a></li>
+          <li><a href="#" class="block px-4 py-2 navbar-link" data-section="facilities">Facilities</a></li>
+          <li><a href="#" class="block px-4 py-2 navbar-link" data-section="contact">Contact</a></li>
         </ul>
       </div>
     </nav>
@@ -62,20 +62,20 @@
     <div class="slider-container flex flex-col md:flex-row gap-4 justify-center">
       <div id="slider1" class="slider flex-1">
         <div class="slider-inner" data-index="0">
-          <img src="/static/WhatsApp-Image-2024-04-01-at-10.47.04.jpeg" alt="Slide 3">
-          <img src="/static/WhatsApp-Image-2024-06-15-at-11.38.24-1.jpeg" alt="Slide 4">
-          <img src="/static/WhatsApp-Image-2024-06-15-at-11.38.24.jpeg" alt="Slide 5">
-          <img src="/static/WhatsApp-Image-2024-06-15-at-11.38.25.jpeg" alt="Slide 6">
+          <img src="static/WhatsApp-Image-2024-04-01-at-10.47.04.jpeg" alt="Slide 3">
+          <img src="static/WhatsApp-Image-2024-06-15-at-11.38.24-1.jpeg" alt="Slide 4">
+          <img src="static/WhatsApp-Image-2024-06-15-at-11.38.24.jpeg" alt="Slide 5">
+          <img src="static/WhatsApp-Image-2024-06-15-at-11.38.25.jpeg" alt="Slide 6">
         </div>
         <button class="slider-btn left" onclick='prevSlide("slider1")'>&#10094;</button>
         <button class="slider-btn right" onclick='nextSlide("slider1")'>&#10095;</button>
       </div>
       <div id="slider2" class="slider flex-1">
         <div class="slider-inner" data-index="0">
-          <img src="/static/WhatsApp-Image-2024-06-21-at-12.34.06-1.jpeg" alt="Slide 7">
-          <img src="/static/WhatsApp-Image-2024-06-21-at-12.34.06-2.jpeg" alt="Slide 8">
-          <img src="/static/WhatsApp-Image-2024-06-21-at-12.34.06.jpeg" alt="Slide 9">
-          <img src="/static/WhatsApp-Image-2024-06-21-at-12.34.07-1.jpeg" alt="Slide 10">
+          <img src="static/WhatsApp-Image-2024-06-21-at-12.34.06-1.jpeg" alt="Slide 7">
+          <img src="static/WhatsApp-Image-2024-06-21-at-12.34.06-2.jpeg" alt="Slide 8">
+          <img src="static/WhatsApp-Image-2024-06-21-at-12.34.06.jpeg" alt="Slide 9">
+          <img src="static/WhatsApp-Image-2024-06-21-at-12.34.07-1.jpeg" alt="Slide 10">
         </div>
         <button class="slider-btn left" onclick='prevSlide("slider2")'>&#10094;</button>
         <button class="slider-btn right" onclick='nextSlide("slider2")'>&#10095;</button>
@@ -83,118 +83,8 @@
     </div>
 
     <main>
-      <!-- About College Section -->
-      <section id="college-info" class="py-12 curvy-bg curvy-bg-left">
-        <div class="container mx-auto px-4">
-          <h2 class="text-3xl font-bold mb-6 text-center">About College</h2>
-          <div class="txt-with-img">
-            <img src="/docs/static/college-diagonally-campus.jpeg" alt="">
-            <div class="content">
-              <p class="mb-4">
-                Saket College of Arts, Science & Commerce (Affiliated to University of Mumbai) was established in 2002 and offers courses leading to B.A., B.Com., B.M.S., B.Com.(B & I), B. Com (A & F), B.Com.(IM), B.Com.(FM), B.Sc.(I.T.), B.Sc (C.S.), M.Sc.(I.T.), M.Com. (Advanced Accountancy), and M.A.(Hindi).
-              </p>
-              <p class="mb-6">
-                With over 5,000 students, our institution is renowned for campus discipline, high academic standards, and comprehensive personality development. We also provide ample opportunities in extracurricular and co-curricular activities including sports, cultural programs, NSS, and DLLE.
-              </p>
-              <button class="huly-btn">
-                <div class="huly-btn-bg">
-                  <div class="huly-btn-bg1"></div>
-                  <div class="huly-btn-bg2"></div>
-                </div>
-                <span>LEARN MORE</span>
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Why Choose Us Section -->
-      <section id="why-choose-us" class="py-12 bg-[url('/your-campus-image.jpg')] bg-cover bg-center backdrop-blur-lg text-white">
-        <div class="container mx-auto px-4">
-          <h2 class="text-3xl font-bold mb-6 text-center">Why Choose Us</h2>
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div class="card">
-              <h3 class="text-2xl font-semibold mb-2">Quality Education</h3>
-              <p>Our commitment is to provide high-quality education tailored to your career aspirations.</p>
-            </div>
-            <div class="card">
-              <h3 class="text-2xl font-semibold mb-2">Campus Environment</h3>
-              <p>Experience an atmosphere where academic excellence meets a vibrant campus life.</p>
-            </div>
-            <div class="card">
-              <h3 class="text-2xl font-semibold mb-2">Student Support</h3>
-              <p>We offer comprehensive support including counseling, career guidance, and placement assistance.</p>
-            </div>
-            <div class="card">
-              <h3 class="text-2xl font-semibold mb-2">Modern Facilities</h3>
-              <p>Benefit from our well-equipped library, state-of-the-art IT labs, sports complex, and more.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Our Courses Section -->
-      <section id="courses" class="py-12 bg-gradient-to-r from-[var(--primary)] to-[var(--secondary)]">
-        <div class="container mx-auto px-4">
-          <h2 class="text-3xl font-bold mb-6 text-center">Our Courses</h2>
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div class="card">
-              <h3 class="text-xl font-semibold mb-2">Undergraduate Courses</h3>
-              <p class="mb-4">Explore a variety of UG programs designed to empower your future.</p>
-              <button class="huly-btn">
-                <div class="huly-btn-bg">
-                  <div class="huly-btn-bg1"></div>
-                  <div class="huly-btn-bg2"></div>
-                </div>
-                <span>View Courses</span>
-              </button>
-            </div>
-            <div class="card">
-              <h3 class="text-xl font-semibold mb-2">Postgraduate Courses</h3>
-              <p class="mb-4">Advance your knowledge with our diverse range of PG programs.</p>
-              <button class="huly-btn">
-                <div class="huly-btn-bg">
-                  <div class="huly-btn-bg1"></div>
-                  <div class="huly-btn-bg2"></div>
-                </div>
-                <span>View Courses</span>
-              </button>
-            </div>
-            <div class="card">
-              <h3 class="text-xl font-semibold mb-2">Certificate Courses</h3>
-              <p class="mb-4">Enhance your skills with our specialized certificate programs.</p>
-              <button class="huly-btn">
-                <div class="huly-btn-bg">
-                  <div class="huly-btn-bg1"></div>
-                  <div class="huly-btn-bg2"></div>
-                </div>
-                <span>View Courses</span>
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Facilities Section -->
-      <section id="facilities" class="py-12 bg-[url('/docs/static/college-diagonally-campus.jpeg')] bg-cover bg-center backdrop-blur-lg text-white">
-        <div class="container mx-auto px-4">
-          <h2 class="text-3xl font-bold mb-6 text-center">Facilities & Resources</h2>
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div class="card">
-              <h3 class="text-2xl font-semibold mb-2">Library</h3>
-              <p>A vast collection of resources to support your academic journey.</p>
-            </div>
-            <div class="card">
-              <h3 class="text-2xl font-semibold mb-2">IT Labs</h3>
-              <p>Our labs are equipped with cutting-edge technology to foster innovation.</p>
-            </div>
-            <div class="card">
-              <h3 class="text-2xl font-semibold mb-2">Sports Complex</h3>
-              <p>Facilities designed to promote physical fitness and team spirit.</p>
-            </div>
-          </div>
-        </div>
-      </section>
+      <!-- Dynamic Content Section -->
+      <div id="dynamic-content" class="container mx-auto px-4 py-12"></div>
     </main>
 
     <!-- Footer -->
@@ -203,9 +93,9 @@
         <div class="text-center md:text-left">
           <h3 class="text-xl font-bold mb-2">Quick Links</h3>
           <ul class="space-y-1">
-            <li><a href="#college-info" class="navbar-link">About Us</a></li>
-            <li><a href="#courses" class="navbar-link">Courses</a></li>
-            <li><a href="#facilities" class="navbar-link">Facilities</a></li>
+            <li><a href="#" class="navbar-link" data-section="about">About Us</a></li>
+            <li><a href="#" class="navbar-link" data-section="courses">Courses</a></li>
+            <li><a href="#" class="navbar-link" data-section="facilities">Facilities</a></li>
           </ul>
         </div>
         <div class="text-center">
@@ -262,6 +152,6 @@
       </div>
     </div>
 
-    <script src="/docs/js/index.js"></script>
+    <script src="js/index.js"></script>
   </body>
 </html>

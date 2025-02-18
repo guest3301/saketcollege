@@ -88,3 +88,22 @@ document.querySelectorAll(".wave-divider").forEach((e) => {
       }, 500);
   });
 });
+
+// Function to fetch and render HTML files dynamically
+function loadContent(url, containerId) {
+  fetch(url)
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById(containerId).innerHTML = data;
+    })
+    .catch(error => console.error('Error loading content:', error));
+}
+
+// Event listeners for navigation links
+document.querySelectorAll('.navbar-link').forEach(link => {
+  link.addEventListener('click', event => {
+    event.preventDefault();
+    const section = event.target.getAttribute('href');
+    loadContent(`${section}.html`, 'main-content');
+  });
+});
