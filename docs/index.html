@@ -10,18 +10,36 @@
   </head>
   <body class="text-gray-200">
     <!-- Header -->
-    <header class="curvy-bg py-2 px-4 flex items-center justify-between bg-white">
-      <div class="container mx-auto flex flex-col md:flex-row items-center justify-between">
-        <div class="mb-4 md:mb-0">
-          <img src="logo-large.png" alt="Saket College Logo">
-        </div>
-        <div class="text-center">
-          <h3 class="text-lg uppercase tracking-widest text-black">Saket Gyanpeeth's</h3>
-          <h1 class="text-4xl font-extrabold mt-2 text-black">Saket College of Arts, Science & Commerce</h1>
-          <div class="mt-2 space-x-4">
-            <span class="text-sm uppercase text-black">Permanently Affiliated to University of Mumbai</span>
-            <br>
-            <span class="text-sm uppercase text-black">NAAC Accredited 'B' Grade</span>
+    <header class="py-2 px-4 bg-white">
+      <div class="container mx-auto">
+        <div class="flex flex-col md:flex-row items-center justify-between">
+          <!-- Left side: Logo and text -->
+          <div class="flex items-center">
+            <div class="flex-shrink-0">
+              <img src="logo-large.png" alt="Saket College Logo" class="w-24">
+            </div>
+            <div class="ml-4 text-left">
+              <h3 class="text-lg uppercase tracking-widest text-black">Saket Gyanpeeth's</h3>
+              <h1 class="text-3xl font-extrabold mt-2 text-black">Saket College of Arts, Science & Commerce</h1>
+              <div class="mt-2 space-x-4">
+                <span class="text-sm uppercase text-black">Permanently Affiliated to University of Mumbai</span>
+                <span class="text-sm uppercase text-black">NAAC Accredited 'B' Grade</span>
+              </div>
+            </div>
+          </div>
+          <!-- Right side: Navigation with responsive divider -->
+          <div class="w-full md:w-auto mt-4 md:mt-0 md:flex md:items-center">
+            <!-- Divider: horizontal for mobile, vertical for desktop -->
+            <hr class="block md:hidden my-4 border-t border-gray-300">
+            <div class="hidden md:block h-8 border-l border-gray-300 mx-4"></div>
+            <nav>
+              <ul class="flex flex-col md:flex-row md:space-x-6 items-center">
+                <li><a href="#quick-links" class="text-sm text-gray-700 hover:underline">Quick Links</a></li>
+                <li><a href="#placements" class="text-sm text-gray-700 hover:underline">Placements</a></li>
+                <li><a href="#admissions" class="text-sm text-gray-700 hover:underline">Admissions</a></li>
+                <li><a href="#contact" class="text-sm text-gray-700 hover:underline">Contact</a></li>
+              </ul>
+            </nav>
           </div>
         </div>
       </div>
@@ -49,7 +67,7 @@
             </button>
           </div>
         </div>
-        <ul id="mobile-menu" class="md:hidden flex-col space-y-2 pb-4 hidden">
+        <ul id="mobile-menu" class="md:hidden flex flex-row space-x-2 pb-4 hidden text-xs">
           <li><a href="about.html" class="block px-4 py-2 navbar-link">About Us</a></li>
           <li><a href="courses.html" class="block px-4 py-2 navbar-link">Courses</a></li>
           <li><a href="facilities.html" class="block px-4 py-2 navbar-link">Facilities</a></li>
@@ -57,56 +75,63 @@
         </ul>
       </div>
     </nav>
-
-    <!-- Slider Section -->
-    <div class="slider-container flex flex-col md:flex-row gap-4 justify-center">
-      <div id="slider1" class="slider flex-1">
-        <div class="slider-inner" data-index="0">
-          <img src="/static/WhatsApp-Image-2024-04-01-at-10.47.04.jpeg" alt="Slide 3">
-          <img src="/static/WhatsApp-Image-2024-06-15-at-11.38.24-1.jpeg" alt="Slide 4">
-          <img src="/static/WhatsApp-Image-2024-06-15-at-11.38.24.jpeg" alt="Slide 5">
-          <img src="/static/WhatsApp-Image-2024-06-15-at-11.38.25.jpeg" alt="Slide 6">
-        </div>
-        <button class="slider-btn left" onclick='prevSlide("slider1")'>&#10094;</button>
-        <button class="slider-btn right" onclick='nextSlide("slider1")'>&#10095;</button>
-      </div>
-      <div id="slider2" class="slider flex-1">
-        <div class="slider-inner" data-index="0">
-          <img src="/static/WhatsApp-Image-2024-06-21-at-12.34.06-1.jpeg" alt="Slide 7">
-          <img src="/static/WhatsApp-Image-2024-06-21-at-12.34.06-2.jpeg" alt="Slide 8">
-          <img src="/static/WhatsApp-Image-2024-06-21-at-12.34.06.jpeg" alt="Slide 9">
-          <img src="/static/WhatsApp-Image-2024-06-21-at-12.34.07-1.jpeg" alt="Slide 10">
-        </div>
-        <button class="slider-btn left" onclick='prevSlide("slider2")'>&#10094;</button>
-        <button class="slider-btn right" onclick='nextSlide("slider2")'>&#10095;</button>
+    <style>
+      /* Custom CSS for About College Section */
+      #college-info {
+        position: relative;
+      }
+      /* The background image behind the text */
+      #college-info::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: url('/docs/static/college-diagonally-campus.jpeg') center/cover no-repeat;
+        opacity: 0.3;
+        filter: blur(4px);
+        z-index: 0;
+      }
+      /* The text container with solid background overlay */
+      .about-content {
+        position: relative;
+        z-index: 10;
+        background-color: rgba(0, 0, 0, 0.6); /* adjust the opacity/color as needed */
+        padding: 2rem;
+        border-radius: 0.5rem;
+      }
+    </style>
+    <!-- About College Section -->
+    <main>
+ <!-- About College Section -->
+ <section id="college-info" class="py-12">
+  <div class="container mx-auto px-4">
+    <h2 class="text-3xl font-bold mb-6 text-center relative z-10">About College</h2>
+    <div class="flex flex-col md:flex-row items-center relative z-10">
+      <!-- Optionally, you can remove the image element if you want the background image to serve as the image -->
+      <!--<img src="/docs/static/college-diagonally-campus.jpeg" alt="" class="w-full md:w-1/2 mb-4 md:mb-0" /> -->
+      <div class="about-content md:ml-4">
+        <p class="mb-4">
+          Saket College of Arts, Science & Commerce (Affiliated to University of Mumbai)
+          was established in 2002 and offers courses leading to B.A., B.Com., B.M.S., 
+          B.Com.(B & I), B. Com (A & F), B.Com.(IM), B.Com.(FM), B.Sc.(I.T.), B.Sc (C.S.),
+          M.Sc.(I.T.), M.Com. (Advanced Accountancy), and M.A.(Hindi).
+        </p>
+        <p class="mb-6">
+          With over 5,000 students, our institution is renowned for campus discipline,
+          high academic standards, and comprehensive personality development. We also provide
+          ample opportunities in extracurricular and co-curricular activities including sports,
+          cultural programs, NSS, and DLLE.
+        </p>
+        <button class="huly-btn">
+          <div class="huly-btn-bg">
+            <div class="huly-btn-bg1"></div>
+            <div class="huly-btn-bg2"></div>
+          </div>
+          <span>LEARN MORE</span>
+        </button>
       </div>
     </div>
-
-    <main>
-      <!-- About College Section -->
-      <section id="college-info" class="py-12 curvy-bg curvy-bg-left">
-        <div class="container mx-auto px-4">
-          <h2 class="text-3xl font-bold mb-6 text-center">About College</h2>
-          <div class="txt-with-img">
-            <img src="/docs/static/college-diagonally-campus.jpeg" alt="">
-            <div class="content">
-              <p class="mb-4">
-                Saket College of Arts, Science & Commerce (Affiliated to University of Mumbai) was established in 2002 and offers courses leading to B.A., B.Com., B.M.S., B.Com.(B & I), B. Com (A & F), B.Com.(IM), B.Com.(FM), B.Sc.(I.T.), B.Sc (C.S.), M.Sc.(I.T.), M.Com. (Advanced Accountancy), and M.A.(Hindi).
-              </p>
-              <p class="mb-6">
-                With over 5,000 students, our institution is renowned for campus discipline, high academic standards, and comprehensive personality development. We also provide ample opportunities in extracurricular and co-curricular activities including sports, cultural programs, NSS, and DLLE.
-              </p>
-              <button class="huly-btn">
-                <div class="huly-btn-bg">
-                  <div class="huly-btn-bg1"></div>
-                  <div class="huly-btn-bg2"></div>
-                </div>
-                <span>LEARN MORE</span>
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
+  </div>
+</section>
 
       <!-- Why Choose Us Section -->
       <section id="why-choose-us" class="py-12 bg-[url('/your-campus-image.jpg')] bg-cover bg-center backdrop-blur-lg text-white">
